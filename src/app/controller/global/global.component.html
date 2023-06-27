@@ -1,0 +1,19 @@
+<div style="text-align:center;font-size:xx-large" >
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngIf="activeSession == false">
+      <a class="nav-link" routerLink="/login">Iniciar sesión</a>
+    </li>
+    <li class="nav-item" *ngIf="activeSession == true">
+      <a class="nav-link" routerLink="/orders">Pedidos</a>
+    </li>
+    <li class="nav-item" *ngIf="activeSession == true">
+      <a class="nav-link" routerLink="/cart">Cesta</a>
+    </li>
+    <li class="nav-item" *ngIf="activeSession == true">
+      <a class="nav-link" routerLink="/logout">Cerrar sesión</a>
+    </li>
+  </ul>
+</div>
+<div>
+   <router-outlet></router-outlet>
+</div>
